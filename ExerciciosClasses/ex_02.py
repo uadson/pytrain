@@ -1,6 +1,9 @@
+'''Crie uma classe que modele um quadrado:'''
+
+
 class Quadrado:
 
-	def __init__(self, lado):
+	def __init__(self, lado=None, area=None):
 		self.lado = lado
 
 	def altera_valor(self, valor):
@@ -8,20 +11,20 @@ class Quadrado:
 		return self.lado
 
 	def retorna_valor(self):
-		print(f'Valor do Lado do Quadrado alterado para:{self.lado}')
+		return self.lado
 
 	def calcular_area(self):
-		area = self.lado ** 2
-		print(f'A área do Quadrado é: {area}')
+		self.area = self.lado ** 2
+		return self.area
 
 if __name__ == '__main__':
 
-	q = Quadrado(4)
+	q = Quadrado(lado = 4)
 
-	print(f'Valor do Lado do Quadrado: {q.lado}')
+	print(f'Lado = {q.lado}')
 
 	q.altera_valor(6)
 
-	q.retorna_valor()
+	print(f'(Novo Valor) Lado = {q.retorna_valor()}')
 
-	q.calcular_area()
+	print(f'Área = {q.calcular_area()}')

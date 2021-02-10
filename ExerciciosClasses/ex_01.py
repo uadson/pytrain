@@ -6,25 +6,18 @@ Métodos: trocaCor e mostraCor
 
 class Bola:
 
-    def __init__(self, cor, circ, material):
+    def __init__(self, cor=None, circ=None, material=None):
 
         self.cor = cor
         self.circ = circ
         self.material = material
 
     def mostra_cor(self):
-
-        return print(
-            f'''Cor:{self.cor}, 
-Circunferência: {self.circ}, 
-Material: {self.material}'''
-)
+        return self.cor
 
     def troca_cor(self, nova_cor):
+        nova_cor = 'Azul'
         self.cor = nova_cor
-        print(f'Nova Cor: {self.cor}')
-        print('Cor Alterada com Sucesso!')
-        
         return self.cor
 
 if __name__ == '__main__':
